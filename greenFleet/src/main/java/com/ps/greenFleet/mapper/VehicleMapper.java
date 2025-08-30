@@ -34,7 +34,7 @@ public class VehicleMapper {
                 .tenantId(vehicle.getTenantId())
                 .assignedDriverId(
                         vehicle.getAssignedDriver() != null
-                                ? vehicle.getAssignedDriver().getDriverId().toString()
+                                ? vehicle.getAssignedDriver().getId().toString()
                                 : null
                 )
                 .build();

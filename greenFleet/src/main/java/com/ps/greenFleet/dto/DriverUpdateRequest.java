@@ -19,7 +19,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class DriverUpdateRequest {
-    private UUID tenantId; // can move between fleet and independent (null)
+    private String tenantId; // can move between fleet and independent (null)
 
 
     @Email
@@ -32,7 +32,7 @@ public class DriverUpdateRequest {
 
 
     private String licenseNumber;
-    private Instant licenseExpiry;
+    private String licenseExpiry;
 
 
     private VehicleType vehicleType;
@@ -42,6 +42,6 @@ public class DriverUpdateRequest {
     private BigDecimal co2PerKm;
     private BigDecimal starRating;
     private Set<String> certifications;
-    private UUID assignedVehicleId;
+    private String assignedVehicleId;
     private DriverStatus status;
 }

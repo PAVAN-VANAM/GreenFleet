@@ -15,9 +15,9 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 public class PucCertificate {
+
     private String certificateId;
-    private Instant issuedAt;
-    private Instant expiryAt;
-    private String authority;
-    private String fileUrl; // optional storage link
-}
+    private String issuedAt;
+    private String expiryAt;
+//    private String authority;
+   }

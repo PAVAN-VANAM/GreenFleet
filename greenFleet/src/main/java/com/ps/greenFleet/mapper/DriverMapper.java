@@ -9,8 +9,8 @@ public class DriverMapper {
 
     public static Driver toEntity(DriverCreateRequest dto) {
         return Driver.builder()
-                .tenantId(dto.getTenantId())
                 .email(dto.getEmail())
+                .password(dto.getPassword())
                 .phone(dto.getPhone())
                 .name(dto.getName())
                 .licenseNumber(dto.getLicenseNumber())
@@ -33,19 +33,19 @@ public class DriverMapper {
 
     public static DriverResponse toResponse(Driver driver) {
         return DriverResponse.builder()
-                .driverId(driver.getDriverId())
-                .tenantId(driver.getTenantId())
                 .email(driver.getEmail())
                 .phone(driver.getPhone())
                 .name(driver.getName())
                 .licenseNumber(driver.getLicenseNumber())
+                .licenseExpiry(driver.getLicenseExpiry())
+                .pucCertificate(driver.getPucCertificate())
                 .vehicleType(driver.getVehicleType())
+                .vehicleAgeYears(driver.getVehicleAgeYears())
+                .co2PerKm(driver.getCo2PerKm())
+                .starRating(driver.getStarRating())
                 .capacityKg(driver.getCapacityKg())
                 .status(driver.getStatus())
                 .role(driver.getRole())
-                .assignedVehicleId(driver.getAssignedVehicleId())
-                .createdAt(driver.getCreatedAt())
-                .updatedAt(driver.getUpdatedAt())
                 .build();
     }
 }

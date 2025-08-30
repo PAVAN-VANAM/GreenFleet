@@ -20,8 +20,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class DriverCreateRequest {
-    private UUID tenantId; // nullable for independent
-
 
     @NotBlank
     @Email
@@ -41,7 +39,7 @@ public class DriverCreateRequest {
 
 
     private String licenseNumber;
-    private Instant licenseExpiry;
+    private String licenseExpiry;
 
 
     private VehicleType vehicleType;
